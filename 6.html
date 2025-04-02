@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+			background-color: #ffffff;
+		}
+
+		main{
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+
+		#impaled{
+			width: auto;
+			max-width: 60%;
+			height: 80%;
+			max-height: 80vh;
+			max-height: 80dvh;
+			padding: 0px;
+  			margin: 0px auto;
+			position: absolute;
+			bottom: -1vh;
+			object-fit: contain;
+			object-position: bottom;
+			z-index: 2;
+			transform-origin: bottom;
+			transform: rotate(-1deg);
+			animation: swing 7.5s ease-in-out infinite, pain 0.8125s linear infinite;
+		}
+
+		@keyframes swing{
+  			0% { transform: rotate(-1deg); }
+ 		 	50% { transform: rotate(1deg); }
+ 		 	100% { transform: rotate(-1deg); }
+		}
+
+		@keyframes pain{
+			0% { content: url("impaledfull.png"); }
+ 		 	50% { content: url("impaled2full.png"); }
+ 		 	100% { content: url("impaledfull.png"); }
+ 		 }
+	</style>
+	<script src="randomizer.js"></script>
+</head>
+<body onload="firstrandom(6)">
+	<a id="reseter" href="7.html" style="text-decoration: none;">
+		<main>
+			<img src="impaledfull2.png" alt="Justice" height="500" width="500" id="impaled">
+		</main>
+	</a>
+</body>
+</html>

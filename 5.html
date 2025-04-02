@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+  			background-color: #ffb6c1;
+		}
+
+		.centerthis{
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+
+		#gunguy831{
+			width: auto;
+			max-width: 135%;
+			height: 92%;
+			min-height: 92vh;
+			min-height: 92dvh;
+			max-height: 92vh;
+			max-height: 92dvh;
+			padding: 0px;
+  			margin: 0px;
+			position: absolute;
+			bottom: 0px;
+			object-fit: contain;
+			object-position: bottom;
+			z-index: 2;
+			filter: drop-shadow( 0 0 5vmax rgba(0, 0, 0, 15%));
+			animation: backg2 10s linear infinite;
+		}
+
+		.crowd{
+			width: 100%;
+			height: calc(100vh + 25vw);
+			padding: 0px;
+  			margin: 0px;
+			overflow: hidden;
+  			background-image: url(patternnew.png);
+  			background-repeat: repeat;
+  			background-size: 25vw auto;
+  			z-index: 1;
+  			animation: backg 10s linear infinite;
+		}
+
+		@keyframes backg{
+			from {
+    			transform: translateY(0%);
+ 			}
+
+  			to {
+    			transform: translateY(-25vw);
+  			}
+		}
+
+		@media only screen and (max-aspect-ratio: 4/3)
+		{
+			.crowd{
+				height: calc(100vh + 33.334vw);
+				background-size: auto 33.334vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-33.334vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-aspect-ratio: 1/1)
+		{
+			.crowd{
+				height: calc(100vh + 50vw);
+				background-size: auto 50vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-50vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-aspect-ratio: 3/4)
+		{
+			.crowd{
+				height: calc(100vh + 100vw);
+				background-size: auto 100vw;
+				width: 150vw;
+				margin-left: -50vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-100vw);
+  				}
+			}
+		}
+
+		@media only screen and (min-aspect-ratio: 21/9)
+		{
+			.crowd{
+				height: calc(100vh + 20vw);
+				background-size: auto 20vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-20vw);
+  				}
+			}
+		}
+
+		@media only screen and (min-aspect-ratio: 32/9)
+		{
+			.crowd{
+				height: calc(100vh + 16.666666667vw);
+				background-size: auto 16.666666667vw;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateY(0%);
+ 				}
+
+  				to {
+    				transform: translateY(-16.666666667vw);
+  				}
+			}
+		}
+	</style>
+	<script src="randomizer.js"></script>
+</head>
+<body onload="firstrandom(5)">
+	<a id="reseter" href="6.html" style="text-decoration: none;">
+		<main>
+			<div class="centerthis">
+				<img src="Gunguy831.png" alt="Retribution" height="500" width="500" id="gunguy831">
+			</div>
+			<div class="crowd"></div>
+		</main>
+	</a>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="initialize.css">
+	<link rel="shortcut icon" type="image" href="Logo.png">
+	<style>
+		body{
+  			background-color: #ffb6c1;
+		}
+
+		#manstanding{
+			width: auto;
+			max-width: 60%;
+			height: 92vh;
+			height: 92dvh;
+			max-height: 92vh;
+			max-height: 92dvh;
+			padding: 0px;
+			margin: 0px auto;
+			position: absolute;
+			bottom: 0px;
+			object-fit: contain;
+			object-position: bottom;
+			z-index: 2;
+			filter: drop-shadow( 0 0 5vmax rgba(0, 0, 0, 25%));
+		}
+
+		.scroll{
+			width: 120vw;
+			height: 100%;
+			min-height: 100vh;
+  			min-height: 100dvh;
+			padding: 0px;
+  			margin: 0px;
+			background-image: url("part7.png");
+  			background-repeat: repeat;
+  			background-size: 20vw auto;
+  			z-index: 1;
+  			animation: backg 5s linear infinite;
+  			overflow: hidden;
+		}
+
+		@keyframes backg{
+			from {
+    			transform: translateX(0%);
+ 			}
+
+  			to {
+    			transform: translateX(-20vw);
+  			}
+		}
+
+		@media only screen and (max-aspect-ratio: 4/3){
+			#manstanding{
+				max-width: 75%;
+			}
+
+			.scroll{
+				width: 125vw;
+				background-size: 25vw auto;
+			}
+				
+			@keyframes backg{
+				from {
+    				transform: translateX(0%);
+ 				}
+
+  				to {
+    				transform: translateX(-25vw);
+  				}
+			}
+		}
+		
+		@media only screen and (max-aspect-ratio: 1/1){
+			#manstanding{
+				max-width: 100%;
+			}
+
+			.scroll{
+				width: 133.334vw;
+				background-size: 33.334vw auto;
+			}
+				
+			@keyframes backg{
+				from {
+    				transform: translateX(0%);
+ 				}
+
+  				to {
+    				transform: translateX(-33.334vw);
+  				}
+			}
+		}
+
+		@media only screen and (max-aspect-ratio: 3/4){
+			.scroll{
+				width: 150vw;
+				background-size: 50vw auto;
+			}
+				
+			@keyframes backg{
+				from {
+    				transform: translateX(0%);
+ 				}
+
+  				to {
+    				transform: translateX(-50vw);
+  				}
+			}
+		}
+
+		@media only screen and (min-aspect-ratio: 21/9)
+		{
+			.scroll{
+				width: 116.667vw;
+				background-size: 16.667vw auto;
+			}
+				
+			@keyframes backg{
+				from {
+    				transform: translateX(0%);
+ 				}
+
+  				to {
+    				transform: translateX(-16.667vw);
+  				}
+			}
+		}
+
+		@media only screen and (min-aspect-ratio: 32/9)
+		{
+			.scroll{
+				width: 114.285714286vw;
+				background-size: 14.285714286vw auto;
+			}
+
+			@keyframes backg{
+				from {
+    				transform: translateX(0%);
+ 				}
+
+  				to {
+    				transform: translateX(-14.285714286vw);
+  				}
+			}
+		}
+	</style>
+	<script src="randomizer.js"></script>
+</head>
+<body onload="firstrandom(3)">
+	<a id="reseter" href="4.html" style="text-decoration: none;">
+		<main>
+			<img src="part7.png" alt="Visage" height="500" width="500" id="manstanding">
+			<div class="scroll"></div>
+		</main>
+	</a>
+</body>
+</html>
