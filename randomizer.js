@@ -111,11 +111,11 @@ function firstrandom(number)
 
 	if(andomize != 1) 
 	{
-		document.getElementById("reseter").href = andomize + ".html";
+		document.getElementById("reseter").href = "./" + andomize + ".html";
 	}
 	else
 	{
-		document.getElementById("reseter").href = "index.html";
+		document.getElementById("reseter").href = "./index.html";
 	}
 }
 
