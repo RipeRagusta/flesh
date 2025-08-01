@@ -1,37 +1,51 @@
-var pageArray;
-var checkable;
+let pageArray;
+let checkable;
+const pageIds = [
+				  [1, "./index.html"], 
+				  [2, "./2.html"],
+				  [3, "./3.html"],
+				  [4, "./4.html"],
+				  [5, "./5.html"],
+				  [6, "./6.html"],
+				  [7, "./7.html"],
+				  [8, "./8.html"],
+				  [9, "./9.html"]
+				];
 
-function firstrandom(number)
+const indexFlipped = new Set([1, 2]);
+const pinkBackgroundCenterImage = new Set([7, 8, 9]);
+
+function firstrandom(currentPageId)
 {
-	var andomize = ((Math.floor(Math.random() * 8)) + 1);
+	let newPageId = newRandom();
 
-	if(checkStorage() == true)
+	if(checkStorage() === true)
 	{
 		if(sessionStorage.getItem("lastTwoPages") === null)
 		{
-			pageArray = new Array();
+			pageHistoryArray = new Array();
 		}
 		else
 		{
-			pageArray = JSON.parse(sessionStorage.getItem("lastTwoPages"));
+			pageHistoryArray = JSON.parse(sessionStorage.getItem("lastTwoPages"));
 		}
 	}
 	else
 	{
-		pageArray = new Array();
+		pageHistoryArray = new Array();
 	}
 
-	switch(pageArray.length)
+	switch(pageHistoryArray.length)
 	{
 		case 0:
-			pageArray[0] = number;
+			pageHistoryArray[0] = currentPageId;
 			checkable = false;
 			break;
 
 		case 1:
-			if(number != pageArray[0])
+			if(currentPageId != pageHistoryArray[0])
 			{
-				pageArray[1] = number;
+				pageHistoryArray[1] = currentPageId;
 				checkable = true;
 			}
 			else
@@ -42,10 +56,10 @@ function firstrandom(number)
 			break;
 		
 		case 2:
-			if(number != pageArray[1])
+			if(currentPageId != pageHistoryArray[1])
 			{
-				pageArray[0] = pageArray[1];
-				pageArray[1] = number;
+				pageHistoryArray[0] = pageHistoryArray[1];
+				pageHistoryArray[1] = currentPageId;
 			}
 
 			checkable = true;
@@ -57,66 +71,75 @@ function firstrandom(number)
 			break;
 	}
 
-	if(checkStorage() == true)
+	if(checkStorage() === true)
 	{
-		sessionStorage.setItem("lastTwoPages", JSON.stringify(pageArray));
+		sessionStorage.setItem("lastTwoPages", JSON.stringify(pageHistoryArray));
 	}
 
-	if(checkable == true)
+	do
 	{
-		secondLastPage = pageArray[0];
-
-		while((andomize == number) || (andomize == secondLastPage))
-		{
-			andomize = ((Math.floor(Math.random() * 8)) + 1);
-		}
-
-		if((number == 7) || (number ==  8))
-		{
-			while((andomize == 7) || (andomize == 8) || (andomize == secondLastPage))
-			{
-				andomize = ((Math.floor(Math.random() * 8)) + 1);
-			}
-		}
-		else if((number == 1) || (number ==  2))
-		{
-			while((andomize == 1) || (andomize == 2) || (andomize == secondLastPage))
-			{
-				andomize = ((Math.floor(Math.random() * 8)) + 1);
-			}
-		}
+		newPageId = newRandom();
 	}
-	else
-	{
-		while(andomize == number)
-		{
-			andomize = ((Math.floor(Math.random() * 8)) + 1);
-		}
+	while(currentPageId === newPageId);
 
-		if((number == 7) || (number ==  8))
+	if(indexPairing(currentPageId))
+	{
+		do
 		{
-			while((andomize == 7) || (andomize == 8))
-			{
-				andomize = ((Math.floor(Math.random() * 8)) + 1);
-			}
+			newPageId = newRandom();
 		}
-		else if((number == 1) || (number ==  2))
+		while(currentPageId === newPageId || indexPairing(newPageId));
+	}
+	else if(pinkBackgroundCenterImageSet(currentPageId))
+	{
+		do
 		{
-			while((andomize == 1) || (andomize == 2))
-			{
-				andomize = ((Math.floor(Math.random() * 8)) + 1);
-			}
+			newPageId = newRandom();
 		}
+		while(currentPageId === newPageId || pinkBackgroundCenterImageSet(newPageId));
 	}
 
-	if(andomize != 1) 
+	let pageHistory = new Set(pageHistoryArray);
+
+	if(checkable === true)
 	{
-		document.getElementById("reseter").href = "./" + andomize + ".html";
+		pageHistory = new Set(pageHistoryArray);
 	}
 	else
 	{
-		document.getElementById("reseter").href = "./index.html";
+		pageHistory = null;
 	}
+
+	if(pageHistory)
+	{
+		if(pageHistory.has(newPageId))
+		{
+			do
+			{
+				newPageId = newRandom();
+			}
+			while(currentPageId === newPageId || pageHistory.has(newPageId));
+
+			if(indexPairing(currentPageId))
+			{
+				do
+				{
+					newPageId = newRandom();
+				}
+				while(currentPageId === newPageId || indexPairing(newPageId) || pageHistory.has(newPageId));
+			}
+			else if(pinkBackgroundCenterImageSet(currentPageId))
+			{
+				do
+				{
+					newPageId = newRandom();
+				}
+				while(currentPageId === newPageId || pinkBackgroundCenterImageSet(newPageId) || pageHistory.has(newPageId));
+			}
+		}
+	}
+
+	document.getElementById("reseter").href = pageIds[newPageId - 1][1];
 }
 
 function checkStorage()
@@ -133,4 +156,19 @@ function checkStorage()
     {
         return false;
     }
+}
+
+function indexPairing(pageNum)
+{
+    return indexFlipped.has(pageNum);
+}
+
+function pinkBackgroundCenterImageSet(pageNum)
+{
+	return pinkBackgroundCenterImage.has(pageNum)
+}
+
+function newRandom()
+{
+	return ((Math.floor(Math.random() * 9)) + 1);
 }
