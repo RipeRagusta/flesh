@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="./initialize.css">
+	<link rel="shortcut icon" type="image" href="./Logo.png">
+	<style>
+		body{
+			background-color: #ffffff;
+		}
+
+		main{
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  			background: url("./thanyou.png");
+  			background-size: 50vw auto;
+  			background-repeat: repeat;
+  			image-rendering: pixelated;
+  			height: 100dvh;
+  			animation: thanever 1.75s linear infinite;
+		}
+
+		@keyframes thanever{
+			from {
+		    	background-position-y: 0%;
+		 	}
+
+		  	to {
+		    	background-position-y: calc(0.085106383 * 50vw);
+		  	}
+		}
+	</style>
+	<script src="./randomizer.js"></script>
+</head>
+<body onload="firstrandom(10)">
+	<a id="reseter" href="./index.html" style="text-decoration: none;">
+		<main>
+			
+		</main>
+	</a>
+</body>
+</html>
