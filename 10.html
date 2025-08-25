@@ -15,12 +15,13 @@
 			display: flex;
   			justify-content: center;
   			align-items: center;
-  			background: url("./thanyou.png");
+  			background-image: url("./thanyou.png");
   			background-size: 50vw auto;
   			background-repeat: repeat;
   			image-rendering: pixelated;
   			height: 100dvh;
-  			animation: thanever 1.75s linear infinite;
+  			animation: thanever 1.25s linear infinite,
+    				   flash 5s ease-in-out infinite;
 		}
 
 		@keyframes thanever{
@@ -31,6 +32,57 @@
 		  	to {
 		    	background-position-y: calc(0.085106383 * 50vw);
 		  	}
+		}
+
+		@keyframes flash{
+			0% {
+			    background-color: #ffffff;
+			    background-image: url("./thanyou.png");
+			}
+
+			24% {
+			    background-color: #ffffff;
+			    background-image: url("./thanyou.png");
+			}
+
+			25% {
+			    background-color: #ffb6c1;
+			    background-image: url("./thanyouyellow.png");
+			}
+
+			30% {
+			    background-color: #ffb6c1;
+			    background-image: url("./thanyouyellow.png");
+			}
+
+			31% {
+			    background-color: #ffffff;
+			    background-image: url("./thanyou.png");
+			}
+
+			74%{
+				background-color: #ffffff;
+				background-image: url("./thanyou.png");
+			}
+
+			75%{
+				background-color: #ffff00;
+				background-image: url("./thanyoupink.png");
+			}
+
+			80%{
+				background-color: #ffff00;
+				background-image: url("./thanyoupink.png");
+			}
+			81%{
+				background-color: #ffffff;
+				background-image: url("./thanyou.png");
+			}
+
+			100% {
+		    	background-color: #ffffff;
+		    	background-image: url("./thanyou.png");
+			}
 		}
 	</style>
 	<script src="./randomizer.js"></script>
