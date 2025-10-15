@@ -10,11 +10,12 @@ const pageIds = [
 				  [7, "./7.html"],
 				  [8, "./8.html"],
 				  [9, "./9.html"],
-				  [10, "./10.html"]
+				  [10, "./10.html"],
+				  [11, "./11.html"]
 				];
 
 const indexFlipped = new Set([1, 2]);
-const pinkBackgroundCenterImage = new Set([7, 8, 9]);
+const pinkBackgroundCenterImage = new Set([7, 8, 9, 11]);
 const PAGEAMOUNT = pageIds.length;
 
 function firstrandom(currentPageId)
