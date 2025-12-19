@@ -17,12 +17,13 @@ const pageIds = [
 
 const indexFlipped = new Set([1, 2]);
 const pinkBackgroundCenterImage = new Set([7, 8, 9, 11]);
+const rare = new Set([3, 10, 9]);
 const PAGEAMOUNT = pageIds.length;
+
+let invalidPairings = [indexFlipped, pinkBackgroundCenterImage];
 
 function firstrandom(currentPageId)
 {
-	let newPageId = newRandom();
-
 	if(checkStorage() === true)
 	{
 		if(sessionStorage.getItem("lastTwoPages") === null)
@@ -80,68 +81,45 @@ function firstrandom(currentPageId)
 		sessionStorage.setItem("lastTwoPages", JSON.stringify(pageHistoryArray));
 	}
 
+	let newPageId;
+	let valid;
+
 	do
 	{
 		newPageId = newRandom();
-	}
-	while(currentPageId === newPageId);
+		valid = true;
 
-	if(indexPairing(currentPageId))
-	{
-		do
+		for(let i = 0; i < invalidPairings.length; i++)
 		{
-			newPageId = newRandom();
-		}
-		while(currentPageId === newPageId || indexPairing(newPageId));
-	}
-	else if(pinkBackgroundCenterImageSet(currentPageId))
-	{
-		do
-		{
-			newPageId = newRandom();
-		}
-		while(currentPageId === newPageId || pinkBackgroundCenterImageSet(newPageId));
-	}
-
-	let pageHistory = new Set(pageHistoryArray);
-
-	if(checkable === true)
-	{
-		pageHistory = new Set(pageHistoryArray);
-	}
-	else
-	{
-		pageHistory = null;
-	}
-
-	if(pageHistory)
-	{
-		if(pageHistory.has(newPageId))
-		{
-			do
+			if(invalidPairings[i].has(newPageId) && invalidPairings[i].has(currentPageId))
 			{
-				newPageId = newRandom();
+				valid = false;
 			}
-			while(currentPageId === newPageId || pageHistory.has(newPageId));
 
-			if(indexPairing(currentPageId))
+			if(checkable === true)
 			{
-				do
+				if(pageHistoryArray[i] === newPageId)
 				{
-					newPageId = newRandom();
+					valid = false;
 				}
-				while(currentPageId === newPageId || indexPairing(newPageId) || pageHistory.has(newPageId));
 			}
-			else if(pinkBackgroundCenterImageSet(currentPageId))
+
+			if(currentPageId === newPageId)
 			{
-				do
+				valid = false;
+			}
+
+			if(rare.has(newPageId))
+			{
+				let roll = getRandMinMax(1, 10000);
+				if(roll != 1)
 				{
-					newPageId = newRandom();
+					valid = false;
 				}
-				while(currentPageId === newPageId || pinkBackgroundCenterImageSet(newPageId) || pageHistory.has(newPageId));
 			}
 		}
 	}
+	while(!valid);
 
 	document.getElementById("reseter").href = pageIds[newPageId - 1][1];
 }
@@ -162,17 +140,12 @@ function checkStorage()
     }
 }
 
-function indexPairing(pageNum)
-{
-    return indexFlipped.has(pageNum);
-}
-
-function pinkBackgroundCenterImageSet(pageNum)
-{
-	return pinkBackgroundCenterImage.has(pageNum)
-}
-
 function newRandom()
 {
 	return ((Math.floor(Math.random() * PAGEAMOUNT)) + 1);
+}
+
+function getRandMinMax(min, max)
+{
+    return (Math.floor(Math.random() * (max - min + 1)) + min);
 }
