@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="383.11707mm"
+   height="198.93408mm"
+   viewBox="0 0 383.11707 198.93409"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="signin.svg"
+   inkscape:export-filename="signin.png"
+   inkscape:export-xdpi="124.59856"
+   inkscape:export-ydpi="124.59856"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.27705528"
+     inkscape:cx="543.21289"
+     inkscape:cy="707.44005"
+     inkscape:window-width="1536"
+     inkscape:window-height="792"
+     inkscape:window-x="0"
+     inkscape:window-y="40"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g452" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(86.55853,-125.99984)" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(86.55853,-125.99984)">
+    <g
+       id="g1439">
+      <g
+         id="g514"
+         transform="translate(2.1081543e-6,9.9999988)">
+        <g
+           id="g359"
+           transform="translate(0,10.000014)">
+          <g
+             id="g346"
+             transform="translate(0,10.000022)">
+            <g
+               id="g477"
+               transform="translate(0,9.9998055)">
+              <g
+                 id="g452">
+                <g
+                   id="g473">
+                  <g
+                     id="g343"
+                     transform="translate(0,10.000035)">
+                    <circle
+                       style="fill:#ffff00;stroke-width:0.264583"
+                       id="path236"
+                       cx="105.00001"
+                       cy="125.99996"
+                       r="50" />
+                    <g
+                       id="g352"
+                       transform="matrix(1,0,0,0.8960548,7.2054443e-6,19.333803)">
+                      <rect
+                         style="fill:#ffff00;stroke-width:0.264583"
+                         id="rect400"
+                         width="100"
+                         height="35"
+                         x="54.606998"
+                         y="186.00005" />
+                      <ellipse
+                         style="fill:#ffff00;stroke-width:0.297292"
+                         id="path404"
+                         cx="54.999996"
+                         cy="203.49995"
+                         rx="12.5"
+                         ry="17.5" />
+                      <ellipse
+                         style="fill:#ffff00;stroke-width:0.297292"
+                         id="path404-3"
+                         cx="155"
+                         cy="203.49995"
+                         rx="12.5"
+                         ry="17.5" />
+                    </g>
+                  </g>
+                  <text
+                     xml:space="preserve"
+                     style="font-weight:bold;font-size:3.175px;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans Bold';fill:#000000;stroke-width:0.264583"
+                     x="-88.093117"
+                     y="274.66824"
+                     id="text1125"><tspan
+                       id="tspan1123"
+                       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.9167px;font-family:MathJax_SansSerif;-inkscape-font-specification:'MathJax_SansSerif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff00;fill-opacity:1;stroke-width:0.264583"
+                       x="-88.093117"
+                       y="274.66824"
+                       sodipodi:role="line">flesh.enterprises</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
