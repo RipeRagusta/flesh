@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Flesh Enterprises</title>
+	<link rel="stylesheet" href="./initialize.css">
+	<link rel="shortcut icon" type="image" href="./Logo.png">
+	<style>
+		body{
+			background-color: #ffffff;
+		}
+
+		#logo{
+			max-height: 90%;
+			height: 100%;
+			width: auto;
+			max-width: 90%;
+			object-fit: contain;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@keyframes blur{
+		  0% {
+		    filter: blur(0.05vmin);
+		  }
+		  50% {
+		    filter: blur(0.2vmax);
+		  }
+		  100% {
+		    filter: blur(0.05vmin);
+		  }
+		}
+	</style>
+	<script src="./randomizer.js"></script>
+</head>
+<body onload="firstrandom(3)">
+	<a id="reseter" href="./4.html" style="text-decoration: none;">
+		<main>
+			<img src="./f.svg" alt="Flesh enterprises" height="500" width="500" id="logo">
+		</main>
+	</a>
+</body>
+</html>
