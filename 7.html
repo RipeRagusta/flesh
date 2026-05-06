@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" type="image" href="./Logo.png">
 	<style>
 		body{
-			background-color: #ffb6c1;
+			background-color: #ffff00;
 		}
 
 		main{
@@ -17,22 +17,25 @@
   			align-items: center;
 		}
 
-		#ours{
-			height: 50vh;
-			height: 50dvh;
-			width: auto;
-			max-width: 94.728682171%;
-			object-fit: contain;
+		#signin{
+			width: 60%;
+			max-width: 60%;
+			height: auto;
+			max-height: 30vh;
+			max-height: 30dvh;
 			padding: 0px;
-  			margin: 0px;
+  			margin: 0px auto;
+			position: absolute;
+			object-fit: contain;
+			z-index: 2;
 		}
 	</style>
 	<script src="./randomizer.js"></script>
 </head>
-<body onload="firstrandom(6)">
-	<a id="reseter" href="7.html" style="text-decoration: none;">
+<body onload="firstrandom(7)">
+	<a id="reseter" href="./index.html" style="text-decoration: none;">
 		<main>
-			<img src="./the world is.png" alt="Flesh enterprises" height="500" width="500" id="ours">
+			<img src="./signin.svg" alt="Flesh enterprises" height="500" width="500" id="signin">
 		</main>
 	</a>
 </body>
