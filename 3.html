@@ -8,39 +8,41 @@
 	<link rel="shortcut icon" type="image" href="./Logo.png">
 	<style>
 		body{
-			background-color: #ffffff;
+  			background-color: #000000;
 		}
 
-		#logo{
-			max-height: 90%;
-			height: 100%;
-			width: auto;
-			max-width: 90%;
+		main{
+			display: flex;
+  			justify-content: center;
+  			align-items: center;
+		}
+
+		#eye{
+			width: 70%;
+			max-width: 70%;
+			height: auto;
+			max-height: 64.3vh;
+			max-height: 64.3dvh;
+			padding: 0px;
+  			margin: 0px;
+			display: block;
+			position: fixed;
 			object-fit: contain;
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-50%);
+			animation: flash 2s linear infinite;
 		}
 
-		@keyframes blur{
-		  0% {
-		    filter: blur(0.05vmin);
-		  }
-		  50% {
-		    filter: blur(0.2vmax);
-		  }
-		  100% {
-		    filter: blur(0.05vmin);
-		  }
-		}
+		@keyframes flash{
+			0% { content: url("./enterprises logo3.svg"); }
+ 		 	7.25% { content: url("./enterprises logo2.svg"); }
+ 		 	100% { content: url("./enterprises logo2.svg"); }
+ 		}
 	</style>
 	<script src="./randomizer.js"></script>
 </head>
 <body onload="firstrandom(3)">
 	<a id="reseter" href="./4.html" style="text-decoration: none;">
 		<main>
-			<img src="./f.svg" alt="Flesh enterprises" height="500" width="500" id="logo">
+			<img src="./enterprises logo2.svg" alt="Flesh enterprises" height="500" width="500" id="eye">
 		</main>
 	</a>
 </body>

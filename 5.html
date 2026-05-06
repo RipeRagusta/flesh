@@ -8,95 +8,26 @@
 	<link rel="shortcut icon" type="image" href="./Logo.png">
 	<style>
 		body{
-  			background-color: #ffffff;
+			background-color: #ffb6c1;
 		}
 
-		.centerthis{
+		main{
 			display: flex;
   			justify-content: center;
   			align-items: center;
 		}
 
-		#gunguy831{
-			width: auto;
-			max-width: 135%;
-			height: 92%;
-			min-height: 92vh;
-			min-height: 92dvh;
-			max-height: 92vh;
-			max-height: 92dvh;
+		#signin{
+			width: 60%;
+			max-width: 60%;
+			height: auto;
+			max-height: 30vh;
+			max-height: 30dvh;
 			padding: 0px;
-  			margin: 0px;
+  			margin: 0px auto;
 			position: absolute;
-			bottom: 0px;
 			object-fit: contain;
-			object-position: bottom;
 			z-index: 2;
-		}
-
-		@media only screen and (max-aspect-ratio: 4/3)
-		{
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-33.334vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-aspect-ratio: 1/1)
-		{
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-50vw);
-  				}
-			}
-		}
-
-		@media only screen and (max-aspect-ratio: 3/4)
-		{
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-100vw);
-  				}
-			}
-		}
-
-		@media only screen and (min-aspect-ratio: 21/9)
-		{
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-20vw);
-  				}
-			}
-		}
-
-		@media only screen and (min-aspect-ratio: 32/9)
-		{
-			@keyframes backg{
-				from {
-    				transform: translateY(0%);
- 				}
-
-  				to {
-    				transform: translateY(-16.666666667vw);
-  				}
-			}
 		}
 	</style>
 	<script src="./randomizer.js"></script>
@@ -104,9 +35,7 @@
 <body onload="firstrandom(5)">
 	<a id="reseter" href="./6.html" style="text-decoration: none;">
 		<main>
-			<div class="centerthis">
-				<img src="./Gunguy831.svg" alt="Flesh enterprises" height="500" width="500" id="gunguy831">
-			</div>
+			<img src="./signin.svg" alt="Flesh enterprises" height="500" width="500" id="signin">
 		</main>
 	</a>
 </body>

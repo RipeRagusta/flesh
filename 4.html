@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" type="image" href="./Logo.png">
 	<style>
 		body{
-  			background-color: #000000;
+			background-color: #ffffff;
 		}
 
 		main{
@@ -17,32 +17,42 @@
   			align-items: center;
 		}
 
-		#eye{
-			width: 70%;
-			max-width: 70%;
-			height: auto;
-			max-height: 64.3vh;
-			max-height: 64.3dvh;
+		#impaled{
+			width: auto;
+			max-width: 60%;
+			height: 80%;
+			max-height: 80vh;
+			max-height: 80dvh;
 			padding: 0px;
-  			margin: 0px;
-			display: block;
-			position: fixed;
+  			margin: 0px auto;
+			position: absolute;
+			bottom: -1vh;
 			object-fit: contain;
-			animation: flash 2s linear infinite;
+			object-position: bottom;
+			z-index: 2;
+			transform-origin: bottom;
+			transform: rotate(-1deg);
+			animation: swing 7.5s ease-in-out infinite, pain 0.8125s linear infinite;
 		}
 
-		@keyframes flash{
-			0% { content: url("./enterprises logo3.svg"); }
- 		 	7.25% { content: url("./enterprises logo2.svg"); }
- 		 	100% { content: url("./enterprises logo2.svg"); }
- 		}
+		@keyframes swing{
+  			0% { transform: rotate(-1deg); }
+ 		 	50% { transform: rotate(1deg); }
+ 		 	100% { transform: rotate(-1deg); }
+		}
+
+		@keyframes pain{
+			0% { content: url("./impaledfull.png"); }
+ 		 	50% { content: url("./impaled2full.png"); }
+ 		 	100% { content: url("./impaledfull.png"); }
+ 		 }
 	</style>
 	<script src="./randomizer.js"></script>
 </head>
 <body onload="firstrandom(4)">
 	<a id="reseter" href="./5.html" style="text-decoration: none;">
 		<main>
-			<img src="./enterprises logo2.svg" alt="Flesh enterprises" height="500" width="500" id="eye">
+			<img src="./impaledfull2.png" alt="Flesh enterprises" height="500" width="500" id="impaled">
 		</main>
 	</a>
 </body>

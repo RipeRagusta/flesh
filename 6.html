@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" type="image" href="./Logo.png">
 	<style>
 		body{
-			background-color: #ffffff;
+			background-color: #ffb6c1;
 		}
 
 		main{
@@ -17,42 +17,22 @@
   			align-items: center;
 		}
 
-		#impaled{
+		#ours{
+			height: 50vh;
+			height: 50dvh;
 			width: auto;
-			max-width: 60%;
-			height: 80%;
-			max-height: 80vh;
-			max-height: 80dvh;
-			padding: 0px;
-  			margin: 0px auto;
-			position: absolute;
-			bottom: -1vh;
+			max-width: 94.728682171%;
 			object-fit: contain;
-			object-position: bottom;
-			z-index: 2;
-			transform-origin: bottom;
-			transform: rotate(-1deg);
-			animation: swing 7.5s ease-in-out infinite, pain 0.8125s linear infinite;
+			padding: 0px;
+  			margin: 0px;
 		}
-
-		@keyframes swing{
-  			0% { transform: rotate(-1deg); }
- 		 	50% { transform: rotate(1deg); }
- 		 	100% { transform: rotate(-1deg); }
-		}
-
-		@keyframes pain{
-			0% { content: url("./impaledfull.png"); }
- 		 	50% { content: url("./impaled2full.png"); }
- 		 	100% { content: url("./impaledfull.png"); }
- 		 }
 	</style>
 	<script src="./randomizer.js"></script>
 </head>
 <body onload="firstrandom(6)">
-	<a id="reseter" href="./7.html" style="text-decoration: none;">
+	<a id="reseter" href="./index.html" style="text-decoration: none;">
 		<main>
-			<img src="./impaledfull2.png" alt="Flesh enterprises" height="500" width="500" id="impaled">
+			<img src="./the world is.png" alt="Flesh enterprises" height="500" width="500" id="ours">
 		</main>
 	</a>
 </body>

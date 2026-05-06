@@ -6,15 +6,13 @@ const pageIds = [
 				  [3, "./3.html"],
 				  [4, "./4.html"],
 				  [5, "./5.html"],
-				  [6, "./6.html"],
-				  [7, "./7.html"],
-				  [8, "./8.html"]
+				  [6, "./6.html"]
 				];
 
-const pinkBackground = new Set([1, 8, 7]);
-const whiteBackground = new Set([6, 3, 5]);
+const pinkBackground = new Set([1, 5, 6]);
+const whiteBackground = new Set([4]);
 const yellowBackground = new Set([2]);
-const blackBackground = new Set([4]);
+const blackBackground = new Set([3]);
 
 const rare = new Set([]);
 const PAGEAMOUNT = pageIds.length;
