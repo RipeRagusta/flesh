@@ -6,11 +6,12 @@ const pageIds = [
 				  [3, "./3.html"],
 				  [4, "./4.html"],
 				  [5, "./5.html"],
-				  [6, "./6.html"]
+				  [6, "./6.html"],
+				  [7, "./7.html"]
 				];
 
 const pinkBackground = new Set([1, 5, 6]);
-const whiteBackground = new Set([4]);
+const whiteBackground = new Set([4, 7]);
 const yellowBackground = new Set([2]);
 const blackBackground = new Set([3]);
 
